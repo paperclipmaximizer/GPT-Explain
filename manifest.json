@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "GPT Explain",
+    "description": "Look up definitions based on page context using the OpenAI GPT-3 API.",
+    "version": "0.1",
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "permissions": [
+      "contextMenus",
+      "activeTab",
+      "tabs"
+    ],
+    "browser_action": {
+      "default_title": "Definition Lookup"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+        
+    ]
+  }
+  
